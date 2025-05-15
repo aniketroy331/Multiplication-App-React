@@ -136,7 +136,7 @@ const VideoPlayerApp = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/videos');
+        const response = await axios.get('https://multiplication-app-videouploader.onrender.com/api/videos');
         const enhancedApiVideos = response.data.map(video => ({
           ...video,
           thumbnail: video.thumbnail || "/images/default-thumb.jpg"

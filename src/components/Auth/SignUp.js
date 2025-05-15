@@ -14,7 +14,7 @@ const Signup = () => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://multiplication-auth-app.onrender.com/api/auth/register', {
+      const res = await axios.post('https://multiplication-app-server.onrender.com/api/auth/register', {
         name,
         email,
         password

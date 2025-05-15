@@ -1,0 +1,290 @@
+.rule1main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f8ff;
+  background-image: linear-gradient(to bottom right, #e6f7ff, #f0fff0);
+}
+
+.rulescontainer {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 90%;
+}
+
+h1 {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ruleone-input-group {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.input:focus {
+  transform: scale(1.1);
+  outline: none;
+  border-color: #45a049;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.rule1steps {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.rule1step {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #4CAF50;
+  transition: all 0.3s;
+  position: relative;
+  display: none;
+}
+
+.rule1step.active {
+  display: block;
+  animation: bounceIn 0.5s ease-out forwards;
+}
+
+.rule1step-title {
+  color: #4CAF50;
+  margin-bottom: 15px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.fun-emoji {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.digit-box {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 8px;
+  font-weight: bold;
+  font-size: 24px;
+  transition: all 0.5s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tens-digit {
+  background-color: #74c0fc;
+  border: 2px solid #339af0;
+  color: black;
+}
+
+.unit-digit {
+  background-color: #ff8787;
+  border: 2px solid #ff6b6b;
+  color: black;
+}
+
+.highlight {
+  transform: scale(1.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.formula {
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 15px 0;
+  font-size: 20px;
+}
+.formula-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.formula-part {
+    display: flex;
+    align-items: center;
+}
+.explanation {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #495057;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.place-label {
+  font-size: 14px;
+  color: #868e96;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.final-result {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #d3f9d8;
+  border-radius: 10px;
+  display: inline-block;
+  color: #2b8a3e;
+  border: 2px solid #40c057;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounceIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.answer-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.answer-digit {
+  position: relative;
+  margin: 0 10px;
+}
+
+.answer-digit::after {
+  content: attr(data-place);
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  color: #868e96;
+  text-align: center;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.preview-btn {
+  background-color: #ff6b6b;
+  margin-left: 10px;
+}
+
+.preview-btn:hover {
+  background-color: #ff4757;
+}
+#nextBtn{
+    margin-left: 10px;
+}
+
+/* Add to your ruleone.css */
+.hundreds-digit {
+  background-color: #ffcccb;
+  border-color: #ff6b6b;
+}
+
+.thousands-digit {
+  background-color: #d8f3dc;
+  border-color: #52b788;
+}
+
+/* Existing digit box styles */
+.digit-box {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.unit-digit {
+  background-color: #e2f0fd;
+  border-color: #4d96ff;
+}
+
+.tens-digit {
+  background-color: #fff3bf;
+  border-color: #ffd43b;
+}
+
+.highlight {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

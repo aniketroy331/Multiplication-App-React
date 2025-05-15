@@ -1,0 +1,180 @@
+/* Base Styles */
+.video-player-app {
+  font-family: 'Comic Sans MS', 'Marker Felt', 'Arial Rounded', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Loading Screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #4a6fa5;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4a6fa5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Video Section */
+.video-section {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-section:hover {
+  transform: translateY(-5px);
+}
+
+.video-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+}
+
+.video-title {
+  margin: 0;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.local-badge {
+  background: #ffcc00;
+  color: #333;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.video-description {
+  margin: 10px 0 0;
+  font-size: 1.1rem;
+}
+
+/* Video Frame */
+.video-frame {
+  padding: 10px;
+  background: #f0f8ff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border: 5px solid #fff;
+}
+
+video {
+  width: 100%;
+  display: block;
+  background: #000;
+  cursor: pointer;
+}
+
+/* Video Controls */
+.video-controls-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.video-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.control-btn {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.control-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.play-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+}
+
+.backward-btn {
+  background: #FF9800;
+  color: white;
+}
+
+.forward-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.btn-text {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 1.5rem;
+  }
+  
+  .video-controls {
+    max-width: 100%;
+  }
+  
+  .control-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .play-btn {
+    padding: 10px 20px;
+  }
+}

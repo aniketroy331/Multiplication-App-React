@@ -41,7 +41,7 @@ const AdminPanel = () => {
       data.append('title', formData.title);
       data.append('description', formData.description);
       data.append('video', formData.videoFile);
-      const response = await axios.post('http://localhost:5000/api/videos', data, {
+      const response = await axios.post('https://multiplication-app-videouploader.onrender.com/api/videos', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

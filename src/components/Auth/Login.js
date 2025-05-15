@@ -16,7 +16,7 @@ const Login = () => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://multiplication-auth-app.onrender.com/api/auth/login', {
+      const res = await axios.post('https://multiplication-app-server.onrender.com/api/auth/login', {
         email,
         password
       });

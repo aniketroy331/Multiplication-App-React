@@ -11,7 +11,7 @@ const ResetPassword = () => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post(`https://multiplication-auth-app.onrender.com/api/auth/reset-password/${token}`, {
+      await axios.post(`https://multiplication-app-server.onrender.com/api/auth/reset-password/${token}`, {
         password
       });
       setMessage('Password reset successful. You can now login with your new password.');

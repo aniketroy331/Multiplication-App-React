@@ -8,7 +8,7 @@ const ForgotPassword = () => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://multiplication-auth-app.onrender.com/api/auth/forgot-password', {
+      const res = await axios.post('https://multiplication-app-server.onrender.com/api/auth/forgot-password', {
         email
       });
       setMessage(res.data.msg);
